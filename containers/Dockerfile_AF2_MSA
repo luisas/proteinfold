@@ -27,7 +27,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 # Clone AF2 git checkout d3327d968c6cfa31da53324c173ff635ed1ec0b6 && \
 RUN git clone https://github.com/luisas/alphafold_split.git /app/alphafold && \
     cd /app/alphafold && \
-    git checkout 0652c8c8130eea36620dadd25a46c2421d4997a6 && \
+    git checkout 095768b24e9ee76a3f0f85c706f2f91cbfca659f && \
     cd -
 
 # Compile HHsuite from source
@@ -49,7 +49,7 @@ RUN wget -q -P /tmp \
 RUN /conda/bin/conda update -qy conda \
         && /conda/bin/conda install -y -c conda-forge \
             pip \
-            python=3.7
+            python=3.9
 
 # Install pip packages
 RUN /conda/bin/pip3 install --upgrade pip \
